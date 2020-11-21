@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            【洛谷P3693】琪露诺的冰雪小屋 | 
+        
+        Mrsrz&#39;s blog
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/head.png">
+    <link rel="icon" href="/img/head.png">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" itemprop="description" content>
+    <meta name="keywords" content=",模拟">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/github-v2.min.css?AfzKxt++K+/lhZBlSjnxwg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-image: url(/img/Chtholly.jpg);
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Mrsrz&#39;s blog">
+    <meta name="msapplication-starturl" content="http://yoursite.com/lg3693/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Mrsrz&#39;s blog">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/head.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://yoursite.com/lg3693/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="【洛谷P3693】琪露诺的冰雪小屋 | Mrsrz&#39;s blog">
+    <meta property="og:image" content="/img/head.png">
+    <meta property="og:description" content>
+    <meta property="og:article:tag" content="模拟"> 
+
+    
+        <meta property="article:published_time" content="Thu Oct 24 2019 17:52:37 GMT+0800">
+        <meta property="article:modified_time" content="Thu Oct 24 2019 18:08:04 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://yoursite.com/lg3693/index.html">
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/lg3693/index.html",
+    "headline": "【洛谷P3693】琪露诺的冰雪小屋",
+    "datePublished": "Thu Oct 24 2019 17:52:37 GMT+0800",
+    "dateModified": "Thu Oct 24 2019 18:08:04 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "mrsrz",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/head.png"
+        },
+        "description": "珂愛"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Mrsrz&#39;s blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/head.png"
+        }
+    },
+    "keywords": ",模拟",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#题目大意："><span class="post-toc-number">1.</span> <span class="post-toc-text">题目大意：</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#题解："><span class="post-toc-number">2.</span> <span class="post-toc-text">题解：</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Code："><span class="post-toc-number">3.</span> <span class="post-toc-text">Code：</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 5 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/qaq-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                【洛谷P3693】琪露诺的冰雪小屋
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/head.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>mrsrz</strong>
+        <span>10月 24, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/模拟/">模拟</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=【洛谷P3693】琪露诺的冰雪小屋&url=http://yoursite.com/lg3693/index.html&pic=http://yoursite.com/img/head.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=【洛谷P3693】琪露诺的冰雪小屋&url=http://yoursite.com/lg3693/index.html&via=mrsrz" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/lg3693/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/lg3693/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>模拟</p>
+<h2 id="题目大意："><a href="#题目大意：" class="headerlink" title="题目大意："></a>题目大意：</h2><p><a href="~~&lt;https://www.luogu.org/problem/P3693&gt;~~">请自行阅读题面</a></p>
+<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><p><del>一年前就写了，现在数据加强了，然后以前的代码过不了了……</del></p>
+<p>模拟题。<del>好像又是没啥好说类型。</del></p>
+<p>前几个操作都比较简单的，注意细节即可。</p>
+<p>就说一下最后一个操作。</p>
+<p>首先造屋顶。题目中说屋顶可能触及平面 HM，因此判连通性的时候要注意判到 HM。</p>
+<p>接下来是去掉多余方块，这里没什么问题。</p>
+<p>然后是找门……这里和补墙是有联系的，需要先找对门才能补墙。所以我们来看看补墙。</p>
+<p>中间的块显然是直接补的，关键是角落的块。只有被定义为“残缺”的角落块，才需要被补上。</p>
+<p>观察补墙的规则，需要使得填上后不存在肉眼可见的“残缺”的墙。</p>
+<p>注意到，此时门还没安上，因此计划要放门的位置的方块得原封不动。</p>
+<p>那么一个角落上的块需要被填补，当且仅当它旁边的位置预留给门，并且原来没有方块。如果原来有方块，那么此时还无需被拆除，所以它旁边的角落不需要被补上。我原来错的原因就是只判角落旁边是不是门，而没有考虑其原来是否有方块。</p>
+<p>我们已经得到填补墙的正确策略了，接下来可以找门了。</p>
+<p>首先，门的位置需要拆掉的方块尽可能少；其次，要保证用来填补角落的方块的耗费尽可能少；最后，尽可能开在中间。</p>
+<p>按照这个策略找一扇门即可。</p>
+<p>之后的操作还是比较简单的，按题意模拟即可。</p>
+<h2 id="Code："><a href="#Code：" class="headerlink" title="Code："></a>Code：</h2><pre><code class="lang-c++">/*
+By mrsrz
+2018-10-17
+update on 2019-10-19 ~ 2019-10-24
+*/
+#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int N,HM,HR,HC,HX,HY,M;
+int block[25][25][25];//每个位置有没有砖块 
+int cold[25][25];//冷冻度 
+int Have_Blocks=0;//有的砖块个数 
+struct _3D{
+    int x,y,z;
+};
+int dx[]={0,1,0,-1,0,0},dy[]={1,0,-1,0,0,0},dz[]={0,0,0,0,1,-1};
+queue&lt;_3D&gt;q;
+int ok[25][25][25];//判断是否连通 
+void bfs(){
+    memset(ok,0,sizeof ok);
+    for(int i=0;i&lt;N;++i)
+    for(int j=0;j&lt;N;++j)
+    if(block[i][j][0]){
+        ok[i][j][0]=1;
+        q.push((_3D){i,j,0});
+    }
+    while(!q.empty()){
+        _3D now=q.front();q.pop();
+        for(int i=0;i&lt;6;++i){
+            _3D to=(_3D){now.x+dx[i],now.y+dy[i],now.z+dz[i]};
+            if(to.x&lt;0||to.y&lt;0||to.z&lt;0||to.x&gt;=N||to.y&gt;=N||to.z&gt;HM)continue;
+            if(block[to.x][to.y][to.z]&amp;&amp;!ok[to.x][to.y][to.z]){
+                ok[to.x][to.y][to.z]=1;
+                q.push(to);
+            }
+        }
+    }
+}
+namespace ICE_BARRAGE{//发射弹幕 
+    int R,C,D,S;
+    const int dx[]={-1,-1,0,1,1,1,0,-1},dy[]={0,-1,-1,-1,0,1,1,1};
+    void main(){
+        cin&gt;&gt;R&gt;&gt;C&gt;&gt;D&gt;&gt;S;
+        ++S;
+        int Success=0;//成功增加冷冻度的方块数 
+        while(S--){
+            if(R&lt;0||C&lt;0||R&gt;=N||C&gt;=N)break;
+            if(block[R][C][0])break;
+            if(cold[R][C]&lt;4)++cold[R][C],++Success;
+            R+=dx[D],C+=dy[D];
+        }
+        cout&lt;&lt;&quot;CIRNO FREEZED &quot;&lt;&lt;Success&lt;&lt;&quot; BLOCK(S)&quot;;
+    }
+}
+namespace MAKE_ICE_BLOCK{//收集砖块 
+    void main(){
+        int added=0;//增加的个数 
+        for(int i=0;i&lt;N;++i)
+        for(int j=0;j&lt;N;++j)
+        if(cold[i][j]==4){
+            cold[i][j]=0;
+            ++added;
+        }
+        Have_Blocks+=added;
+        cout&lt;&lt;&quot;CIRNO MADE &quot;&lt;&lt;added&lt;&lt;&quot; ICE BLOCK(S),NOW SHE HAS &quot;&lt;&lt;Have_Blocks&lt;&lt;&quot; ICE BLOCK(S)\n&quot;;
+    }
+}
+namespace PUT_ICE_BLOCK{//放砖块 
+    int R,C,H;
+    void main(){
+        cin&gt;&gt;R&gt;&gt;C&gt;&gt;H;
+        if(!Have_Blocks){
+            cout&lt;&lt;&quot;CIRNO HAS NO ICE_BLOCK\n&quot;;
+            return;
+        }
+        bfs();
+        bool canput=false;//判断是否能放
+        if(H==0)canput=true;else
+        for(int i=0;i&lt;6;++i){
+            int x=R+dx[i],y=C+dy[i],z=H+dz[i];
+            if(x&lt;0||y&lt;0||z&lt;0||x&gt;=N||y&gt;=N||z&gt;=HM)continue;
+            if(ok[x][y][z])canput=true;
+        }
+        if(!canput||block[R][C][H]){
+            cout&lt;&lt;&quot;BAKA CIRNO,CAN&#39;T PUT HERE\n&quot;;
+            return;
+        }
+        block[R][C][H]=1;--Have_Blocks;
+        if(H==0)cold[R][C]=0;//!高度为0时放置要清空冷冻度 
+        if(R&lt;HR||R&gt;HR+HX-1||C&lt;HC||C&gt;HC+HY-1){
+            cout&lt;&lt;&quot;CIRNO MISSED THE PLACE\n&quot;;
+        }else
+        if(HR+1&lt;=R&amp;&amp;R&lt;=HR+HX-2&amp;&amp;HC+1&lt;=C&amp;&amp;C&lt;=HC+HY-2){
+            cout&lt;&lt;&quot;CIRNO PUT AN ICE_BLOCK INSIDE THE HOUSE\n&quot;;
+        }else{
+            cout&lt;&lt;&quot;CIRNO SUCCESSFULLY PUT AN ICE_BLOCK,NOW SHE HAS &quot;&lt;&lt;Have_Blocks
+            &lt;&lt;&quot; ICE_BLOCK(S)\n&quot;;
+        }
+    }
+}
+namespace REMOVE_ICE_BLOCK{//移除砖块 
+    int R,C,H;
+    void main(){
+        cin&gt;&gt;R&gt;&gt;C&gt;&gt;H;
+        if(!block[R][C][H]){
+            cout&lt;&lt;&quot;BAKA CIRNO,THERE IS NO ICE_BLOCK\n&quot;;
+            return;
+        }
+        block[R][C][H]=0;
+        ++Have_Blocks;
+        cout&lt;&lt;&quot;CIRNO REMOVED AN ICE_BLOCK&quot;;
+        bfs();
+        int broke=0;//摔碎了的砖块数量 
+        for(int i=0;i&lt;N;++i)
+        for(int j=0;j&lt;N;++j)
+        for(int k=0;k&lt;HM;++k)
+        if(block[i][j][k]&amp;&amp;!ok[i][j][k]){
+            ++broke;
+            block[i][j][k]=0;
+        }
+        if(broke)
+        cout&lt;&lt;&quot;,AND &quot;&lt;&lt;broke&lt;&lt;&quot; BLOCK(S) ARE BROKEN&quot;;
+        cout&lt;&lt;&#39;\n&#39;;
+    }
+}
+namespace MAKE_ROOF{//建屋顶 
+    int WALL_HIGH;
+    int gethigh(){//获取墙高 
+        int maxh=0;
+        for(int i=0;i&lt;HX;++i)
+        for(int h=HM;~h;--h){
+            if(block[HR+i][HC][h])
+            maxh=max(maxh,h);
+            if(block[HR+i][HC+HY-1][h])
+            maxh=max(maxh,h);
+        }
+        for(int i=0;i&lt;HY;++i)
+        for(int h=HM;~h;--h){
+            if(block[HR][HC+i][h])
+            maxh=max(maxh,h);
+            if(block[HR+HX-1][HC+i][h])
+            maxh=max(maxh,h);
+        }
+        return maxh;
+    }
+    int ready(int h){//已经有砖块的格子数 
+        int ret=0;
+        for(int i=HR;i&lt;HR+HX;++i)
+        for(int j=HC;j&lt;HC+HY;++j)
+        ret+=block[i][j][h];
+        return ret;
+    }
+    struct sort_data{
+        pair&lt;int,int&gt;zb;
+        int h1,h2,h3;
+        inline bool operator&lt;(const sort_data&amp;rhs)const{
+            if(h1!=rhs.h1)return h1&gt;rhs.h1;
+            if(h2!=rhs.h2)return h2&lt;rhs.h2;
+            return h3&gt;rhs.h3;
+        }
+    };
+    vector&lt;sort_data&gt;vec;
+    inline int get_blocks_to_fix_the_wall(pair&lt;int,int&gt;door,int fixit=0){
+        int use_to_fix_wall=0;//用来修补的砖块 
+        for(int i=1;i&lt;HX-1;++i)
+        for(int h=0;h&lt;=WALL_HIGH;++h){
+            if(!block[HR+i][HC][h]&amp;&amp;!(HR+i==door.first&amp;&amp;HC==door.second&amp;&amp;h&lt;2)){
+                block[HR+i][HC][h]=fixit;
+                ++use_to_fix_wall;
+            }
+            if(!block[HR+i][HC+HY-1][h]&amp;&amp;!(HR+i==door.first&amp;&amp;HC+HY-1==door.second&amp;&amp;h&lt;2)){
+                block[HR+i][HC+HY-1][h]=fixit;
+                ++use_to_fix_wall;
+            }
+        }
+        for(int i=1;i&lt;HY-1;++i)
+        for(int h=0;h&lt;=WALL_HIGH;++h){
+            if(!block[HR][HC+i][h]&amp;&amp;!(HR==door.first&amp;&amp;HC+i==door.second&amp;&amp;h&lt;2)){
+                block[HR][HC+i][h]=fixit;
+                ++use_to_fix_wall;
+            }
+            if(!block[HR+HX-1][HC+i][h]&amp;&amp;!(HR+HX-1==door.first&amp;&amp;HC+i==door.second&amp;&amp;h&lt;2)){
+                block[HR+HX-1][HC+i][h]=fixit;
+                ++use_to_fix_wall;
+            }
+        }
+        //修补除了角落的墙壁
+        if(fixit==0)use_to_fix_wall=0;
+        for(int h=0;h&lt;=WALL_HIGH&amp;&amp;h&lt;2;++h){//对角落进行考虑 
+            if(!block[HR][HC][h]&amp;&amp;(door.first==HR+1&amp;&amp;door.second==HC&amp;&amp;!block[HR+1][HC][h]||door.first==HR&amp;&amp;door.second==HC+1&amp;&amp;!block[HR][HC+1][h])){
+                block[HR][HC][h]=fixit;
+                ++use_to_fix_wall;
+            }
+            if(!block[HR][HC+HY-1][h]&amp;&amp;(door.first==HR+1&amp;&amp;door.second==HC+HY-1&amp;&amp;!block[HR+1][HC+HY-1][h]||door.first==HR&amp;&amp;door.second==HC+HY-2&amp;&amp;!block[HR][HC+HY-2][h])){
+                block[HR][HC+HY-1][h]=fixit;
+                ++use_to_fix_wall;
+            }
+            if(!block[HR+HX-1][HC][h]&amp;&amp;(door.first==HR+HX-2&amp;&amp;door.second==HC&amp;&amp;!block[HR+HX-2][HC][h]||door.first==HR+HX-1&amp;&amp;door.second==HC+1&amp;&amp;!block[HR+HX-1][HC+1][h])){
+                block[HR+HX-1][HC][h]=fixit;
+                ++use_to_fix_wall;
+            }
+            if(!block[HR+HX-1][HC+HY-1][h]&amp;&amp;(door.first==HR+HX-2&amp;&amp;door.second==HC+HY-1&amp;&amp;!block[HR+HX-2][HC+HY-1][h]||door.first==HR+HX-1&amp;&amp;door.second==HC+HY-2&amp;&amp;!block[HR+HX-1][HC+HY-2][h])){
+                block[HR+HX-1][HC+HY-1][h]=fixit;
+                ++use_to_fix_wall;
+            }
+        }
+        return use_to_fix_wall;
+    }
+    pair&lt;int,int&gt;getdoor(int MAX){//找门的位置 
+        vec.clear();
+        for(int i=HC+1;i&lt;=HC+HY-2;++i){//HR
+            pair&lt;int,int&gt;zb=make_pair(HR,i);
+            int h3=1;
+            if(HY&amp;1){
+                if(i!=(HC+HC+HY-1&gt;&gt;1))h3=0;
+            }else{
+                if(i!=(HC+HC+HY-1&gt;&gt;1)||i!=(HC+HC+HY-1&gt;&gt;1)+1)h3=0;
+            }
+            vec.push_back((sort_data){zb,!block[HR][i][0]+!block[HR][i][1],get_blocks_to_fix_the_wall(zb),h3});
+        }
+        for(int i=HC+1;i&lt;=HC+HY-2;++i){//HR+HX-1
+            pair&lt;int,int&gt;zb=make_pair(HR+HX-1,i);
+            int h3=1;
+            if(HY&amp;1){
+                if(i!=(HC+HC+HY-1&gt;&gt;1))h3=0;
+            }else{
+                if(i!=(HC+HC+HY-1&gt;&gt;1)&amp;&amp;i!=(HC+HC+HY-1&gt;&gt;1)+1)h3=0;
+            }
+            vec.push_back((sort_data){zb,!block[HR+HX-1][i][0]+!block[HR+HX-1][i][1],get_blocks_to_fix_the_wall(zb),h3});
+        }
+        for(int i=HR+1;i&lt;=HR+HX-2;++i){//HC
+            pair&lt;int,int&gt;zb=make_pair(i,HC);
+            int h3=1;
+            if(HX&amp;1){
+                if(i!=(HR+HR+HX-1&gt;&gt;1))h3=0;
+            }else{
+                if(i!=(HR+HR+HX-1&gt;&gt;1)&amp;&amp;i!=(HR+HR+HX-1&gt;&gt;1)+1)h3=0;
+            }
+            vec.push_back((sort_data){zb,!block[i][HC][0]+!block[i][HC][1],get_blocks_to_fix_the_wall(zb),h3});
+        }
+        for(int i=HR+1;i&lt;=HR+HX-2;++i){//HC+HY-1
+            pair&lt;int,int&gt;zb=make_pair(i,HC+HY-1);
+            int h3=1;
+            if(HX&amp;1){
+                if(i!=(HR+HR+HX-1&gt;&gt;1))h3=0;
+            }else{
+                if(i!=(HR+HR+HX-1&gt;&gt;1)&amp;&amp;i!=(HR+HR+HX-1&gt;&gt;1)+1)h3=0;
+            }
+            vec.push_back((sort_data){zb,!block[i][HC+HY-1][0]+!block[i][HC+HY-1][1],get_blocks_to_fix_the_wall(zb),h3});
+        }
+        sort(vec.begin(),vec.end());
+//        for(int i=0;i&lt;vec.size();++i)
+//        if(vec[i].h2&lt;=MAX)
+//        return vec[i].zb;
+        return vec[0].zb;
+    }
+    void main(){
+        WALL_HIGH=gethigh();//墙的最高高度 
+        int ROOF_HIGH=WALL_HIGH+1;//屋顶的高度 
+        int need=HX*HY-ready(ROOF_HIGH);//需要用来建屋顶的砖块数量 
+        if(Have_Blocks&lt;need){
+            cout&lt;&lt;&quot;SORRY CIRNO,NOT ENOUGH ICE_BLOCK(S) TO MAKE ROOF\n&quot;;
+            return;
+        }
+        if(WALL_HIGH&lt;1||((HX-2)*(HY-2)*(WALL_HIGH+1)&lt;2)||HX&lt;2||HY&lt;2){
+            cout&lt;&lt;&quot;SORRY CIRNO,HOUSE IS TOO SMALL\n&quot;;
+            return;
+        }
+        Have_Blocks-=need;
+        for(int i=HR;i&lt;HR+HX;++i)
+        for(int j=HC;j&lt;HC+HY;++j)
+        block[i][j][ROOF_HIGH]=1;
+        int inside=0,outside=0;//内部移除的砖块、外部的砖块 
+        for(int i=HR+1;i&lt;HR+HX-1;++i)
+        for(int j=HC+1;j&lt;HC+HY-1;++j)
+        for(int k=0;k&lt;=WALL_HIGH;++k)
+        if(block[i][j][k]){//计算内部拆掉的砖块 
+            block[i][j][k]=0;
+            ++inside;
+        }
+        cout&lt;&lt;inside&lt;&lt;&quot; ICE_BLOCK(S) INSIDE THE HOUSE NEED TO BE REMOVED\n&quot;;
+        for(int i=0;i&lt;N;++i)//计算外部的砖块 
+        for(int j=0;j&lt;N;++j)
+        if((i&lt;HR||i&gt;HR+HX-1)||(j&lt;HC||j&gt;HC+HY-1))
+        for(int k=0;k&lt;=HM;++k)
+        if(block[i][j][k]){
+            ++outside;
+        }else;else
+        for(int k=ROOF_HIGH+1;k&lt;=HM;++k)
+        if(block[i][j][k]){
+            ++outside;
+        }
+        cout&lt;&lt;outside&lt;&lt;&quot; ICE_BLOCK(S) OUTSIDE THE HOUSE NEED TO BE REMOVED\n&quot;;
+        bfs();
+        for(int i=HR;i&lt;HR+HX;++i)
+        for(int j=HC;j&lt;HC+HY;++j)
+        if(block[i][j][ROOF_HIGH]&amp;&amp;!ok[i][j][ROOF_HIGH]){//判断屋顶是否会塌 
+            cout&lt;&lt;&quot;SORRY CIRNO,HOUSE IS BROKEN WHEN REMOVING BLOCKS\n&quot;;
+            return;
+        }
+        Have_Blocks+=inside+outside;
+        pair&lt;int,int&gt;door=getdoor(Have_Blocks);
+//        cout&lt;&lt;door.first&lt;&lt;&#39; &#39;&lt;&lt;door.second&lt;&lt;endl;
+        int use_to_fix_wall=get_blocks_to_fix_the_wall(door,1);
+        if(Have_Blocks&lt;use_to_fix_wall){
+            cout&lt;&lt;&quot;SORRY CIRNO,NOT ENOUGH ICE_BLOCKS TO FIX THE WALL\n&quot;;
+            return;
+        }
+        Have_Blocks-=use_to_fix_wall;
+        bool is_fix_door=0;
+        cout&lt;&lt;&quot;GOOD JOB CIRNO,SUCCESSFULLY BUILT THE HOUSE\n&quot;;
+        if(!block[door.first][door.second][0]&amp;&amp;!block[door.first][door.second][1]){
+            cout&lt;&lt;&quot;DOOR IS OK\n&quot;;
+        }else{
+            is_fix_door=1;
+            cout&lt;&lt;&quot;HOUSE HAS NO DOOR\n&quot;;
+            Have_Blocks+=block[door.first][door.second][0]+block[door.first][door.second][1];
+            block[door.first][door.second][0]=block[door.first][door.second][1]=0;
+        }
+        if(use_to_fix_wall)cout&lt;&lt;&quot;WALL NEED TO BE FIXED\n&quot;;else
+        cout&lt;&lt;&quot;WALL IS OK\n&quot;;
+        //下面开始补柱子
+        int use_to_fix_corner=0; 
+        for(int h=0;h&lt;=WALL_HIGH;++h){
+            if(!block[HR][HC][h]){
+                block[HR][HC][h]=1;
+                ++use_to_fix_corner;
+            }
+            if(!block[HR][HC+HY-1][h]){
+                block[HR][HC+HY-1][h]=1;
+                ++use_to_fix_corner;
+            }
+            if(!block[HR+HX-1][HC][h]){
+                block[HR+HX-1][HC][h]=1;
+                ++use_to_fix_corner;
+            }
+            if(!block[HR+HX-1][HC+HY-1][h]){
+                block[HR+HX-1][HC+HY-1][h]=1;
+                ++use_to_fix_corner;
+            }
+        }
+        if(use_to_fix_corner){
+            cout&lt;&lt;&quot;CORNER NEED TO BE FIXED\n&quot;;
+            if(Have_Blocks&lt;use_to_fix_corner)Have_Blocks=0;else
+            Have_Blocks-=use_to_fix_corner;
+        }else{
+            cout&lt;&lt;&quot;CORNER IS OK\n&quot;;
+        }
+        cout&lt;&lt;&quot;CIRNO FINALLY HAS &quot;&lt;&lt;Have_Blocks&lt;&lt;&quot; ICE_BLOCK(S)\n&quot;;
+        //下面判完美情况
+        if(!use_to_fix_wall&amp;&amp;!use_to_fix_corner&amp;&amp;!is_fix_door&amp;&amp;!inside&amp;&amp;!outside){
+            bool ok=true;
+            for(int i=0;i&lt;N;++i)
+            for(int j=0;j&lt;N;++j)
+            for(int k=0;k&lt;HM;++k){
+                if((i==HR||i==HR+HX-1)&amp;&amp;(HC&lt;=j&amp;&amp;j&lt;=HC+HY-1)||(j==HC||j==HC+HY-1)&amp;&amp;(HR&lt;=i&amp;&amp;i&lt;=HR+HX-1)){//墙上方有砖块 
+                    if(k&gt;ROOF_HIGH&amp;&amp;block[i][j][k]){
+                        ok=false;break;
+                    }
+                }else
+                if(!(HR&lt;=i&amp;&amp;i&lt;=HR+HX-1&amp;&amp;HC&lt;=j&amp;&amp;j&lt;=HC+HY-1&amp;&amp;k==ROOF_HIGH)&amp;&amp;block[i][j][k]){//非屋顶有砖块 
+                    ok=false;break;
+                }
+            }
+            //以下判断门是否放在中间 
+            if(door.first==HR||door.first==HR+HX-1){
+                if(HY&amp;1){//奇数 
+                    if(door.second!=(HC+HC+HY-1&gt;&gt;1))ok=false;
+                }else{//偶数 
+                    if(door.second!=(HC+HC+HY-1&gt;&gt;1)&amp;&amp;door.second!=(HC+HC+HY-1&gt;&gt;1)+1)ok=false;
+                }
+            }else{
+                if(HX&amp;1){//奇数 
+                    if(door.first!=(HR+HR+HX-1&gt;&gt;1))ok=false;
+                }else{//偶数 
+                    if(door.first!=(HR+HR+HX-1&gt;&gt;1)&amp;&amp;door.first!=(HR+HR+HX-1&gt;&gt;1)+1)ok=false;
+                }
+            }
+            if(ok)
+            cout&lt;&lt;&quot;CIRNO IS PERFECT!\n&quot;;
+        } 
+    }
+}
+int main(){
+    ios::sync_with_stdio(0);
+    cin&gt;&gt;N&gt;&gt;HM&gt;&gt;HR&gt;&gt;HC&gt;&gt;HX&gt;&gt;HY&gt;&gt;M;
+    for(int i=1;i&lt;=M;++i){
+        string opt;
+        cin&gt;&gt;opt;
+        if(opt==&quot;ICE_BARRAGE&quot;)ICE_BARRAGE::main();else
+        if(opt==&quot;MAKE_ICE_BLOCK&quot;)MAKE_ICE_BLOCK::main();else
+        if(opt==&quot;PUT_ICE_BLOCK&quot;)PUT_ICE_BLOCK::main();else
+        if(opt==&quot;REMOVE_ICE_BLOCK&quot;)REMOVE_ICE_BLOCK::main();else
+        if(opt==&quot;MAKE_ROOF&quot;)MAKE_ROOF::main();
+        if(opt==&quot;ICE_BARRAGE&quot;)cout&lt;&lt;&#39;\n&#39;;
+    }
+    return 0;
+}
+</code></pre>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 Gitalk -->
+<div id="gitalk-comment">
+    <!-- Gitalk 评论框 -->
+<div id="gitalk-container"></div>
+
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<script>
+    var gitalk = new Gitalk({
+            clientID: '3b1c25bc36babcc685f2',
+            clientSecret: '2ab0b0464d9a1f774a6dd652da7b34de0ad6d6f5',
+            repo: 'talking',
+            owner: 'mrsrz',
+            admin: ['mrsrz'],
+            // facebook-like distraction free mode
+            distractionFreeMode: false
+        })
+   gitalk.render('gitalk-container')
+</script>
+</div>
+<style>
+    #gitalk-comment {
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/lg5501/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/NOI2017D1T2/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/side.jpg);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/head.png" alt="mrsrz's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        1473200830@qq.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2020/10/">十月 2020<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/09/">九月 2020<span class="sidebar_archives-count">24</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/07/">七月 2020<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/06/">六月 2020<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/04/">四月 2020<span class="sidebar_archives-count">22</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/03/">三月 2020<span class="sidebar_archives-count">47</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/02/">二月 2020<span class="sidebar_archives-count">42</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/01/">一月 2020<span class="sidebar_archives-count">52</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/12/">十二月 2019<span class="sidebar_archives-count">31</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/11/">十一月 2019<span class="sidebar_archives-count">54</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">33</span></a>
+            </ul>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/tags" title="标签">
+                
+                    <i class="material-icons sidebar-material-icons">tab</i>
+                
+                标签
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/about" title="关于">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                关于
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/links" title="友链">
+                
+                    <i class="material-icons sidebar-material-icons">face</i>
+                
+                友链
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/mrsrz" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+        <a href="https://www.zhihu.com/people/mrsrz" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-zhihu">
+                <span class="visuallyhidden">Zhihu</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;2019&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>Mrsrz's blog
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+   <!-- GitTalk -->
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+    
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+    <script src="true?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</body>
+    
+</html>

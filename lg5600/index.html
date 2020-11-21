@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            【洛谷P5600】【XR-4】尺规作图 | 
+        
+        Mrsrz&#39;s blog
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/head.png">
+    <link rel="icon" href="/img/head.png">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" itemprop="description" content>
+    <meta name="keywords" content=",提交答案">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/github-v2.min.css?AfzKxt++K+/lhZBlSjnxwg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-image: url(/img/Chtholly.jpg);
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Mrsrz&#39;s blog">
+    <meta name="msapplication-starturl" content="http://yoursite.com/lg5600/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Mrsrz&#39;s blog">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/head.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://yoursite.com/lg5600/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="【洛谷P5600】【XR-4】尺规作图 | Mrsrz&#39;s blog">
+    <meta property="og:image" content="/img/head.png">
+    <meta property="og:description" content>
+    <meta property="og:article:tag" content="提交答案"> 
+
+    
+        <meta property="article:published_time" content="Tue Oct 22 2019 17:42:48 GMT+0800">
+        <meta property="article:modified_time" content="Tue Oct 22 2019 18:31:54 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://yoursite.com/lg5600/index.html">
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/lg5600/index.html",
+    "headline": "【洛谷P5600】【XR-4】尺规作图",
+    "datePublished": "Tue Oct 22 2019 17:42:48 GMT+0800",
+    "dateModified": "Tue Oct 22 2019 18:31:54 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "mrsrz",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/head.png"
+        },
+        "description": "珂愛"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Mrsrz&#39;s blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/head.png"
+        }
+    },
+    "keywords": ",提交答案",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#题目大意："><span class="post-toc-number">1.</span> <span class="post-toc-text">题目大意：</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#题解："><span class="post-toc-number">2.</span> <span class="post-toc-text">题解：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#任务一"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">任务一</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#任务二"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">任务二</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#任务三"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">任务三</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#任务四"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">任务四</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#任务五"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">任务五</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#任务六"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">任务六</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#任务七"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">任务七</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#任务八"><span class="post-toc-number">2.8.</span> <span class="post-toc-text">任务八</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#任务九"><span class="post-toc-number">2.9.</span> <span class="post-toc-text">任务九</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#任务十"><span class="post-toc-number">2.10.</span> <span class="post-toc-text">任务十</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Code："><span class="post-toc-number">3.</span> <span class="post-toc-text">Code：</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 5 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/qaq-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                【洛谷P5600】【XR-4】尺规作图
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/head.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>mrsrz</strong>
+        <span>10月 22, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/提交答案/">提交答案</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=【洛谷P5600】【XR-4】尺规作图&url=http://yoursite.com/lg5600/index.html&pic=http://yoursite.com/img/head.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=【洛谷P5600】【XR-4】尺规作图&url=http://yoursite.com/lg5600/index.html&via=mrsrz" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/lg5600/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/lg5600/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>提交答案题</p>
+<h2 id="题目大意："><a href="#题目大意：" class="headerlink" title="题目大意："></a>题目大意：</h2><p>给定平面上一些点，和一些已知线段、直线、圆，要得到某个指定的点。</p>
+<p>能做的操作有两种：</p>
+<ol>
+<li>指定两个已经得到的点，过这两点作直线。</li>
+<li>指定两个已经得到的点，以某个点为圆心，另一个点为圆上一点，画圆。</li>
+</ol>
+<p>一个点已经得到，当且仅当其在输入中给出，或是两条线的交点。</p>
+<p>有 $10$ 个任务。</p>
+<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><p>使用了传统题的提交方式，但它还是一道提交答案题。</p>
+<p>挺有趣的一题，是真的要尺规作图。</p>
+<p><a href="https://www.geogebra.org/" target="_blank" rel="noopener">这个网站</a>可以辅助解题。</p>
+<p>先做一些约定，令 直线AB 表示过 A 点和 B 点的直线，圆AB 表示以 A 为圆心，AB 长为半径的圆。</p>
+<p>下面对每个点分别进行讨论。所有有图解的点都会结合图解进行解释。</p>
+<h3 id="任务一"><a href="#任务一" class="headerlink" title="任务一"></a>任务一</h3><p>给定一条线段，求其中点。</p>
+<p>非常简单，作 圆AB 和 圆BA，过两圆交点作 直线CD，与线段交点 E 即为所求。如图所示。</p>
+<p><img src="/images/lg5600/sol1.png" alt></p>
+<h3 id="任务二"><a href="#任务二" class="headerlink" title="任务二"></a>任务二</h3><p>给定 $\rm A(0,0), B(1,0)$ ，直线AB($x$ 轴) 以及直线外一点 C，过 点C 作 直线AB 的垂线，求垂足。</p>
+<p>也比较简单，作 圆AC，交 直线AB 于D，作 圆DC，与 圆AC 交于 E。作 直线CE，与 直线AB 的交点即为所求。如图所示。</p>
+<p><img src="/images/lg5600/sol2.png" alt></p>
+<h3 id="任务三"><a href="#任务三" class="headerlink" title="任务三"></a>任务三</h3><p>给定 正方形ABCD 的四个点和四条边，求其内部一个点，到 A，B ，线段CD 的距离均相等。</p>
+<p>到线段两点的距离相等，不难想到作中垂线。这里就是求两条中垂线的交点。</p>
+<p>作 线段AB 的中垂线的同时即求得 线段BC 的中点 E 以及 线段AB 的中点 F。这里花费 $3$ 步。</p>
+<p>现在要作 线段AE(无需连接) 的中垂线，只剩两步了，怎么办？</p>
+<p>我们考虑共用之前的一个圆。由于是正方形，所以有 $\rm AD=EF$。</p>
+<p>由于作中垂线只需要分别以两个端点为圆心，任意长度为半径作圆，保证有两个交点就可以。所以我们一开始做 线段AB 的中垂线的时候，以 $\rm AB$ 为半径作 圆AB 和圆 BA。这里只需作 圆EF，与 圆AB 交于 I 和 J。再作 直线IJ 即为 线段AE 的中垂线。那么 直线IJ 与直线 EF 的交点即为所求。</p>
+<p>总共 $5$ 步。</p>
+<p>如图所示。</p>
+<p><img src="/images/lg5600/sol3.png" alt></p>
+<h3 id="任务四"><a href="#任务四" class="headerlink" title="任务四"></a>任务四</h3><p>给定 $\rm A(0,0)​$ 和 $\rm B(1,0)​$ 以及 直线AB，要求作出 $(1024,0)​$。</p>
+<p>我们通过作 圆BA，与 直线AB 交于 $(2,0)$，再以这个交点为圆心，横坐标为半径做圆。这样每次交出来的点是原来的 $2$ 倍。因此作 $10$ 次即可得到 $(1024,0)$。</p>
+<h3 id="任务五"><a href="#任务五" class="headerlink" title="任务五"></a>任务五</h3><p>给定 $\rm A(0,0)$ 和 $\rm B(1,0)$ 以及 直线AB，要求作出 $(1000,0)$。</p>
+<p>沿着任务四的思路，还是考虑用倍增的方法。</p>
+<p>这里可以不每次以横坐标为半径作圆。由于我们有 $(1,0)$，所以点 $(x,0)$ 可以通过作半径为 $x-1$ 的圆，来得到 $(2x-1,0)$。</p>
+<p>所以按照以下方法即可：</p>
+<script type="math/tex; mode=display">1\rightarrow 2\rightarrow 4\rightarrow 8\rightarrow 16\rightarrow 32\rightarrow 63\rightarrow 125 \rightarrow 250 \rightarrow 500 \rightarrow 1000</script><p>共计 $10$ 步。</p>
+<h3 id="任务六"><a href="#任务六" class="headerlink" title="任务六"></a>任务六</h3><p>给定 $\rm A(0,0),B(0,1)$ 以及单位圆，求圆上某一点。</p>
+<p>这个点的思路是，求出所求点与原点的直线，与单位圆的交点即为所求。</p>
+<p>这条直线的斜率约为 $k=0.465440612$。我们需要找到一个整点，使得其与原点的直线的斜率大致为这个数。</p>
+<p>我找到这个点 $(6525,3037)$，其斜率约为 $0.465440613$，在 Deepin 的计算器所示精度下只有最后一位有误差。</p>
+<p>然后我们通过任务五的倍增方法（可以稍微进行一些改进）得到 $(6525,0)$ 以及 $(0,3037)$ ，然后得到这两个点连接而成的线段的中点（作中垂线即可），与原点作直线即可。</p>
+<p>这里花了 $32$ 步。</p>
+<h3 id="任务七"><a href="#任务七" class="headerlink" title="任务七"></a>任务七</h3><p>给定锐角三角形的三个点，求其费马点。</p>
+<p>按照传统费马点的做法，是要向外做等边三角形的。我按照这个思路试了试，步数显然过多。</p>
+<p>然后去掉了一些操作，瞎试了一下就做出来了。。</p>
+<p>放图解吧。</p>
+<p><img src="/images/lg5600/sol7.png" alt></p>
+<h3 id="任务八"><a href="#任务八" class="headerlink" title="任务八"></a>任务八</h3><p>给定三角形，求其内切圆与某一边的切点。</p>
+<p>如图所示，设三边长分别 $f,g,h$。</p>
+<p>由切线长定理可知，切点到某个端点的距离为 $\frac{f+g-h}{2}$。</p>
+<p>首先作 圆CA，交 线段BC 于 D。那么得到 $\rm BD=h-g$。</p>
+<p>然后作 圆BD，交 线段AB 于 E。那么得到 $BE=h-g$，则 $AE=f+g-h$。</p>
+<p>再花三步作 线段AE 的中垂线即可。</p>
+<p><img src="/images/lg5600/sol8.png" alt></p>
+<h3 id="任务九"><a href="#任务九" class="headerlink" title="任务九"></a>任务九</h3><p>给定两点，求一个奇怪的点。</p>
+<p>这个……我也不知道如何解释。胡乱试一下就试出来了。</p>
+<p><img src="/images/lg5600/sol9.png" alt></p>
+<h3 id="任务十"><a href="#任务十" class="headerlink" title="任务十"></a>任务十</h3><p>给定任务九中的两点，求另一个奇怪的点。</p>
+<p>考虑在任务九的基础上继续。</p>
+<p>如图所示（与任务九的有所不同），发现所求 点C 与 J 和 F 共线。</p>
+<p>然后再瞎尝试一波……</p>
+<p>如图，作 直线KL，交 圆AB 于 点M。</p>
+<p>再作 圆MN，与 直线FJ 的另一交点即为所求…………</p>
+<p><del>奥妙重重</del></p>
+<p><img src="/images/lg5600/sol10.png" alt></p>
+<hr>
+<p>下面是提交代码，所有任务的答案都整合在里面。</p>
+<h2 id="Code："><a href="#Code：" class="headerlink" title="Code："></a>Code：</h2><pre><code class="lang-c++">#include&lt;iostream&gt;
+using namespace std;
+int main(){
+    int id;
+    cin&gt;&gt;id;
+    if(id==1)
+    cout&lt;&lt;R&quot;(3
+1 0 0 1 0
+1 1 0 0 0
+2 0.5 0.866025404 0.5 -0.866025404
+)&quot;;
+    if(id==2)
+    cout&lt;&lt;R&quot;(3
+1 0 0 5.23124577 4.31624417
+1 6.7820274285203 0 5.23124577 4.31624417
+2 5.23124577 4.31624417 5.23124577 -4.31624417
+)&quot;;
+    if(id==3)
+    cout&lt;&lt;R&quot;(5
+1 0 0 0 1
+1 1 0 1 1
+2 0.5 0.86602540378 0.5 -0.86602540378
+1 0.5 1 0.5 0
+2 -0.49161985 0.87080992 0.9916198487 0.1291900756
+)&quot;;
+    if(id==4)
+    cout&lt;&lt;R&quot;(10
+1 1 0 0 0
+1 2 0 0 0
+1 4 0 0 0
+1 8 0 0 0
+1 16 0 0 0
+1 32 0 0 0
+1 64 0 0 0
+1 128 0 0 0
+1 256 0 0 0
+1 512 0 0 0
+)&quot;;
+    if(id==5)
+    cout&lt;&lt;R&quot;(10
+1 1 0 0 0
+1 2 0 0 0
+1 4 0 0 0
+1 8 0 0 0
+1 16 0 0 0
+1 32 0 1 0
+1 63 0 1 0
+1 125 0 0 0
+1 250 0 0 0
+1 500 0 0 0
+)&quot;;
+    if(id==6)
+    cout&lt;&lt;R&quot;(32
+2 0 0 0 1
+1 0 1 0 -1
+1 0 -1 0 1
+2 1.73205080 0 -1.73205080 0
+1 0 3 0 0
+1 0 6 0 0
+1 0 12 0 -1
+1 0 25 0 0
+1 0 50 0 -1
+1 0 101 0 -1
+1 0 203 0 -1
+1 0 407 0 -1
+1 0 815 0 -1
+1 0 1631 0 0
+1 0 3262 0 -1
+1 0 1 0 0
+1 0 2 0 -1
+1 0 5 0 -1
+1 0 11 0 -1
+1 0 23 0 -1
+1 0 47 0 0
+1 0 94 0 -1
+1 0 189 0 -1
+1 0 379 0 -1
+1 0 759 0 0
+1 0 1518 0 -1
+1 0 0 0 6525
+1 6525 0 0 3037
+1 0 3037 6525 0
+2 632.38084870666 -4132.31575969 5892.6191512933 7169.31575969
+2 6525 0 0 3037
+2 0 0 3262.500000 1518.500000
+)&quot;;
+    if(id==7)
+    cout&lt;&lt;R&quot;(5
+1 0 0 5.16457145 9.12243565
+1 5.16457145 9.12243565 0 0
+2 12.34441574 0 -5.317975292288 9.0338679003
+1 10.4374465400 0.97536669 0 0
+2 0 0 15.6020179900 10.09780234
+)&quot;;
+    if(id==8)
+    cout&lt;&lt;R&quot;(5
+1 5.16457145 9.12243565 0 0
+1 12.34441574 0.00000000 11.6479643 0.88488458
+1 0 0 11.218331671 0
+1 11.218331671 0 0 0
+2 5.609165835 9.7153602149 5.609165835 -9.7153602149
+)&quot;;
+    if(id==9)
+    cout&lt;&lt;R&quot;(6
+1 0 0 10.64978745 0
+1 -10.64978745 0 0 0
+1 -5.324893725 9.22298647 0 0
+1 5.324893725 9.22298647 -10.64978745 0
+2 -5.324893725 9.22298647 -2.88914298926 -7.29317285
+1 -3.96471696441 0 -10.64978745 0
+)&quot;;
+    if(id==10)
+    cout&lt;&lt;R&quot;(9
+1 0 0 10.64978745 0
+1 -10.64978745 0 0 0
+1 -5.324893725 9.22298647 0 0
+1 5.324893725 9.22298647 -10.64978745 0
+2 -5.324893725 9.22298647 -2.88914298926 -7.29317285
+1 -3.96471696441 0 -10.64978745 0
+2 5.324893725 9.222986477 -2.16685724 6.43877844
+2 -13.08553819 10.367501679 21.2995749 0
+1 -6.5503572407083 8.39707049 22.61544124 15.6487849
+)&quot;;
+    return 0;
+}
+</code></pre>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 Gitalk -->
+<div id="gitalk-comment">
+    <!-- Gitalk 评论框 -->
+<div id="gitalk-container"></div>
+
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<script>
+    var gitalk = new Gitalk({
+            clientID: '3b1c25bc36babcc685f2',
+            clientSecret: '2ab0b0464d9a1f774a6dd652da7b34de0ad6d6f5',
+            repo: 'talking',
+            owner: 'mrsrz',
+            admin: ['mrsrz'],
+            // facebook-like distraction free mode
+            distractionFreeMode: false
+        })
+   gitalk.render('gitalk-container')
+</script>
+</div>
+<style>
+    #gitalk-comment {
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/lg5590/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/CF452E/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/side.jpg);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/head.png" alt="mrsrz's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        1473200830@qq.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2020/10/">十月 2020<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/09/">九月 2020<span class="sidebar_archives-count">24</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/07/">七月 2020<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/06/">六月 2020<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/04/">四月 2020<span class="sidebar_archives-count">22</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/03/">三月 2020<span class="sidebar_archives-count">47</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/02/">二月 2020<span class="sidebar_archives-count">42</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/01/">一月 2020<span class="sidebar_archives-count">52</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/12/">十二月 2019<span class="sidebar_archives-count">31</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/11/">十一月 2019<span class="sidebar_archives-count">54</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">33</span></a>
+            </ul>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/tags" title="标签">
+                
+                    <i class="material-icons sidebar-material-icons">tab</i>
+                
+                标签
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/about" title="关于">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                关于
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/links" title="友链">
+                
+                    <i class="material-icons sidebar-material-icons">face</i>
+                
+                友链
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/mrsrz" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+        <a href="https://www.zhihu.com/people/mrsrz" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-zhihu">
+                <span class="visuallyhidden">Zhihu</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;2019&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>Mrsrz's blog
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+   <!-- GitTalk -->
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+    
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+    <script src="true?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</body>
+    
+</html>

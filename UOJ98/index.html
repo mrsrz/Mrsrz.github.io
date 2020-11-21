@@ -1,0 +1,1940 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            【集训队互测2015】未来程序·改 | 
+        
+        Mrsrz&#39;s blog
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/head.png">
+    <link rel="icon" href="/img/head.png">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" itemprop="description" content>
+    <meta name="keywords" content=",模拟">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/github-v2.min.css?AfzKxt++K+/lhZBlSjnxwg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-image: url(/img/Chtholly.jpg);
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Mrsrz&#39;s blog">
+    <meta name="msapplication-starturl" content="http://yoursite.com/UOJ98/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Mrsrz&#39;s blog">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/head.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://yoursite.com/UOJ98/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="【集训队互测2015】未来程序·改 | Mrsrz&#39;s blog">
+    <meta property="og:image" content="/img/head.png">
+    <meta property="og:description" content>
+    <meta property="og:article:tag" content="模拟"> 
+
+    
+        <meta property="article:published_time" content="Thu Oct 08 2020 20:30:36 GMT+0800">
+        <meta property="article:modified_time" content="Thu Oct 08 2020 20:53:54 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://yoursite.com/UOJ98/index.html">
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/UOJ98/index.html",
+    "headline": "【集训队互测2015】未来程序·改",
+    "datePublished": "Thu Oct 08 2020 20:30:36 GMT+0800",
+    "dateModified": "Thu Oct 08 2020 20:53:54 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "mrsrz",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/head.png"
+        },
+        "description": "珂愛"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Mrsrz&#39;s blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/head.png"
+        }
+    },
+    "keywords": ",模拟",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#题目大意："><span class="post-toc-number">1.</span> <span class="post-toc-text">题目大意：</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#题解："><span class="post-toc-number">2.</span> <span class="post-toc-text">题解：</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Code："><span class="post-toc-number">3.</span> <span class="post-toc-text">Code：</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 5 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/qaq-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                【集训队互测2015】未来程序·改
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/head.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>mrsrz</strong>
+        <span>10月 08, 2020</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/模拟/">模拟</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=【集训队互测2015】未来程序·改&url=http://yoursite.com/UOJ98/index.html&pic=http://yoursite.com/img/head.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=【集训队互测2015】未来程序·改&url=http://yoursite.com/UOJ98/index.html&via=mrsrz" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/UOJ98/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/UOJ98/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>模拟，暴力</p>
+<h2 id="题目大意："><a href="#题目大意：" class="headerlink" title="题目大意："></a>题目大意：</h2><p>要求实现一个简易 C++ 解释器，支持部分功能。给定输入以及源代码，求输出结果。</p>
+<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><p>由于给定的源代码并不长，所以可以用比较暴力的方式模拟。</p>
+<p>程序分为以下几个部分：</p>
+<ol>
+<li>初始化输入流。</li>
+<li>分析代码。</li>
+<li>划分语段。</li>
+<li>运行代码。</li>
+</ol>
+<p>主要需要实现的内容：</p>
+<ol>
+<li>表达式求值。</li>
+<li>代码运行部分。</li>
+</ol>
+<p>分析代码的时候，运算符的匹配采用贪心的原则。右结合的 <code>+</code>，<code>-</code> 操作可以记为 <code>$+</code>，<code>$-</code> 以进行区分。</p>
+<p><code>if else</code> 的匹配采用就近原则，贪心匹配。</p>
+<p>对表达式求值的复杂度要求不高，可以暴力处理。具体就是按照优先级从大到小展开（最高的是括号，括号部分递归计算，然后再匹配函数参数以及数组下标。匹配时<strong>左结合</strong>计算，否则会在一些 UB 的时候得到非预期答案。之后是剩余字符）。注意将变量、常数、运算符、函数分开记录。</p>
+<p><code>putchar</code> 可以记为特殊的函数。</p>
+<p><code>cin/cout/endl</code> 可以记为特殊的变量（单独开一类），也可以考虑记为关键字。注意 <code>for</code> 的第一、三个部分可以 <code>cin/cout</code>，所以采用记为变量的方式会比较方便。</p>
+<p>有毒瘤数据，要写内存池防止内存泄露。</p>
+<p><code>{}</code> 里面一定有语句，但是会出现 <code>{...;{...;}...;}</code> 即无征兆地出现花括号的情况。</p>
+<p>还有一些其他小细节，不一一列举。</p>
+<p>代码加注释共 $22.7\texttt{KB}$，其中有不少复制粘贴的，所以感觉也没很难写。</p>
+<h2 id="Code："><a href="#Code：" class="headerlink" title="Code："></a>Code：</h2><pre><code class="lang-c++">/*
+未来程序·改
+By mrsrz
+2020-10-07 ~ 2020-10-08
+*/
+// Pascal is too hard.
+#include&lt;bits/stdc++.h&gt;
+using namespace std;
+
+inline void ErrorThrow(string s){
+    cerr&lt;&lt;s&lt;&lt;endl;
+    exit(1);
+}
+
+string code;
+
+map&lt;string,int&gt;IndexOperator;
+
+inline void _set(string s,int x){IndexOperator[s]=x;}
+
+struct Block{
+    struct __commands{
+        int tp;
+        /*
+            tp:
+            1. Variables define
+            2. Common expression
+            3. For
+            4. While
+            5. If
+            6. Return
+            7. New block
+        */
+        int id;
+    };
+    vector&lt;__commands&gt;cmd;
+    void set(int,int);
+    int run(bool&amp;);
+};
+Block B[50005];
+
+struct Istream{
+    int n,a[100005],it;
+    void Init(){
+        cin&gt;&gt;n,it=0;
+        for(int i=1;i&lt;=n;++i)cin&gt;&gt;a[i];
+    }
+    inline int nextInt(){return a[++it];}
+}InputBuffer; // input stream
+
+struct _word_{
+    string s[10005];
+    int n,type[10005];
+    /*
+    type:
+    1: keywords
+    2: variable or function
+    3: constant
+    4: operator
+    5: bracket
+    */
+    void push(string t,int tp){
+        s[++n]=t,type[n]=tp;
+    }
+}words;
+
+struct variable{ // variable
+    vector&lt;int&gt;A;
+    vector&lt;int&gt;MEM;
+    string name;
+    int size;
+    inline void MEMset(){
+        size=1;
+        for(int i=0;i&lt;(int)A.size();++i)size*=A[i];
+        MEM.clear();MEM.resize(size);
+    }
+    inline int get_address(vector&lt;int&gt;&amp;v){
+        if(v.size()!=A.size())ErrorThrow(&quot;Compile Error! Exit code=4&quot;);
+        int ad=0;
+        for(int i=0;i&lt;(int)v.size();++i){
+            if(v[i]&gt;=A[i])ErrorThrow(&quot;Runtime Error! Segment Fault!&quot;);
+            ad=ad*A[i]+v[i];
+        }
+        return ad;
+    }
+    inline int&amp;get(int address){
+        if(address&gt;size||address&lt;0)ErrorThrow(&quot;Runtime Error! Segment Fault!&quot;);
+        return MEM[address];
+    }
+    inline int&amp;get(vector&lt;int&gt;&amp;v){return get(get_address(v));}
+}__v[20005];
+
+vector&lt;int&gt;memory_id;
+map&lt;string,vector&lt;int&gt; &gt;IndexVar;
+
+int new_var(vector&lt;int&gt;A,string name){
+    int id=memory_id.back();
+    memory_id.pop_back();
+    __v[id].A=A,__v[id].name=name;
+    __v[id].MEMset();
+    IndexVar[name].push_back(id);
+    return id;
+}
+
+void dispose_id(int id){
+    if(IndexVar[__v[id].name].back()!=id)ErrorThrow(&quot;Memory Error!&quot;);
+    IndexVar[__v[id].name].pop_back();
+    __v[id].name=&quot;&quot;,__v[id].A.clear(),__v[id].MEM.clear();
+    memory_id.push_back(id);
+}
+
+void assignment(string name,vector&lt;int&gt;address,int val){
+    __v[IndexVar[name].back()].get(address)=val;
+}
+
+map&lt;string,int&gt;IndexFunc;
+
+struct Func{
+    string name; // function name
+    vector&lt;string&gt;para_name; // parameter
+    int _main_id; // commands
+    int run(vector&lt;int&gt;VAR){
+        if(VAR.size()!=para_name.size())
+            ErrorThrow(&quot;Compile Error! Exit code=3&quot;);
+        for(int i=0;i&lt;(int)VAR.size();++i){
+            new_var(vector&lt;int&gt;(),para_name[i]);
+            assignment(para_name[i],vector&lt;int&gt;(),VAR[i]);
+        }
+        bool isreturn=0;
+        int res=B[_main_id].run(isreturn);
+        for(int i=0;i&lt;(int)VAR.size();++i){
+            dispose_id(IndexVar[para_name[i]].back());
+        }
+        return res;
+    }
+}__func[2005];
+
+int __func_tot;
+
+// -----------------------------------------------------------------------------------------------
+
+int _returntot,_iftot,_whiletot,_fortot,_definetot,EXPtot,Blocktot,_cintot,_couttot;
+
+struct calc_member{
+    int type; // 1: variable  2: constant  3: operator  4: function  5: iostream
+    int id_val;// type=1: variable_id  type=2: value  type=3: operator_id  type=4:parameter  type=5:cin=1/cout=2/endl=3
+    int address;// type=1: address_of_array  type=2,3,4: undefined
+};
+
+inline int turn_to_value(const calc_member&amp;c){
+    if(c.type==2)return c.id_val;
+    if(c.type==1)return __v[c.id_val].get(c.address);
+    ErrorThrow(&quot;Runtime Error!&quot;);
+    return 1;
+}
+
+int get_nextpara(vector&lt;calc_member&gt;&amp;v,int&amp;pos){
+    if(v[pos].type==2||(v[pos].type==1&amp;&amp;v[pos].address!=-1))
+        return turn_to_value(v[pos++]);
+    int it=pos+1,rem=pos;
+    vector&lt;int&gt;lst;
+    if(v[pos].type==1){
+        for(int j=0;j&lt;(int)__v[v[pos].id_val].A.size();++j)
+            lst.push_back(get_nextpara(v,it));
+        pos=it;
+        return __v[v[rem].id_val].get(lst);
+    }else{
+        for(int j=0;j&lt;(int)__func[v[pos].id_val].para_name.size();++j)
+            lst.push_back(get_nextpara(v,it));
+        pos=it;
+        if(v[rem].id_val==1){
+            // putchar
+            cout.put(lst[0]);
+            return lst[0];
+        }else return __func[v[rem].id_val].run(lst);
+    }
+}
+
+struct EXPR{
+    // The most important part of the program.
+    int L,R;
+    void set(int l,int r){L=l,R=r;}
+    calc_member _CALC_(vector&lt;calc_member&gt;v,int level=1){
+        vector&lt;calc_member&gt;m,tmp;
+        switch(level){
+            case 1:{
+                for(int i=0;i&lt;(int)v.size();++i){
+                    if(v[i].type==3&amp;&amp;(v[i].id_val==2||v[i].id_val==4)){
+                        while(m.size()&amp;&amp;(m.back().type!=3||(m.back().id_val!=1&amp;&amp;m.back().id_val!=3)))
+                            tmp.push_back(m.back()),m.pop_back();
+                        m.pop_back();
+                        if(tmp.size())
+                            reverse(tmp.begin(),tmp.end()),m.push_back((calc_member){2,turn_to_value(_CALC_(tmp,0))});
+                        tmp.clear();
+                    }else m.push_back(v[i]);
+                }
+                v=m,m.clear();
+            }
+            case 0:{
+                vector&lt;int&gt;lst;
+                for(int i=0;i&lt;(int)v.size();){
+                    if(v[i].type!=1&amp;&amp;v[i].type!=4)m.push_back(v[i++]);
+                    else if(v[i].type==4){
+                        int t=i+1;
+                        for(int j=0;j&lt;(int)__func[v[i].id_val].para_name.size();++j)
+                            lst.push_back(get_nextpara(v,t));
+                        if(v[i].id_val==1){
+                            // putchar
+                            m.push_back((calc_member){2,lst[0]});
+                            cout.put(lst[0]);
+                        }else m.push_back((calc_member){2,__func[v[i].id_val].run(lst)});
+                        lst.clear();
+                        i=t;
+                    }else{
+                        int t=i+1;
+                        for(int j=0;j&lt;(int)__v[v[i].id_val].A.size();++j)
+                            lst.push_back(get_nextpara(v,t));
+                        m.push_back((calc_member){1,v[i].id_val,__v[v[i].id_val].get_address(lst)});
+                        lst.clear();
+                        i=t;
+                    }
+                }
+                v=m,m.clear();
+            }
+            case 2:{
+                for(int i=(int)v.size()-1;~i;--i){
+                    if(v[i].type!=3)m.push_back(v[i]);
+                    else{
+                        switch(v[i].id_val){
+                            case 5:{
+                                int value=turn_to_value(m.back());
+                                m.pop_back();
+                                m.push_back((calc_member){2,!value});
+                                break;
+                            }
+                            case 6:{
+                                int value=turn_to_value(m.back());
+                                m.pop_back();
+                                m.push_back((calc_member){2,+value});
+                                break;
+                            }
+                            case 7:{
+                                int value=turn_to_value(m.back());
+                                m.pop_back();
+                                m.push_back((calc_member){2,-value});
+                                break;
+                            }
+                            default:m.push_back(v[i]);
+                        }
+                    }
+                }
+                v=m,m.clear();
+                reverse(v.begin(),v.end());
+            }
+            case 3:{
+                for(int i=0;i&lt;(int)v.size();++i){
+                    if(v[i].type==3){
+                        switch(v[i].id_val){
+                            case 8:{
+                                calc_member L=m.back();
+                                m.pop_back();
+                                ++i;
+                                m.push_back((calc_member){2,turn_to_value(L)*turn_to_value(v[i])});
+                                break;
+                            }
+                            case 9:{
+                                calc_member L=m.back();
+                                m.pop_back();
+                                ++i;
+                                m.push_back((calc_member){2,turn_to_value(L)/turn_to_value(v[i])});
+                                break;
+                            }
+                            case 10:{
+                                calc_member L=m.back();
+                                m.pop_back();
+                                ++i;
+                                m.push_back((calc_member){2,turn_to_value(L)%turn_to_value(v[i])});
+                                break;
+                            }
+                            default:m.push_back(v[i]);
+                        }
+                    }else m.push_back(v[i]);
+                }
+                v=m,m.clear();
+            }
+            case 4:{
+                for(int i=0;i&lt;(int)v.size();++i){
+                    if(v[i].type==3){
+                        switch(v[i].id_val){
+                            case 11:{
+                                calc_member L=m.back();
+                                m.pop_back();
+                                ++i;
+                                m.push_back((calc_member){2,turn_to_value(L)+turn_to_value(v[i])});
+                                break;
+                            }
+                            case 12:{
+                                calc_member L=m.back();
+                                m.pop_back();
+                                ++i;
+                                m.push_back((calc_member){2,turn_to_value(L)-turn_to_value(v[i])});
+                                break;
+                            }
+                            default:m.push_back(v[i]);
+                        }
+                    }else m.push_back(v[i]);
+                }
+                v=m,m.clear();
+            }
+            case 5:{
+                for(int i=0;i&lt;(int)v.size();++i){
+                    if(v[i].type==3){
+                        switch(v[i].id_val){
+                            case 13:{
+                                calc_member L=m.back();
+                                m.pop_back();
+                                ++i;
+                                m.push_back((calc_member){2,turn_to_value(L)&lt;=turn_to_value(v[i])});
+                                break;
+                            }
+                            case 14:{
+                                calc_member L=m.back();
+                                m.pop_back();
+                                ++i;
+                                m.push_back((calc_member){2,turn_to_value(L)&gt;=turn_to_value(v[i])});
+                                break;
+                            }
+                            case 15:{
+                                calc_member L=m.back();
+                                m.pop_back();
+                                ++i;
+                                m.push_back((calc_member){2,turn_to_value(L)&lt;turn_to_value(v[i])});
+                                break;
+                            }
+                            case 16:{
+                                calc_member L=m.back();
+                                m.pop_back();
+                                ++i;
+                                m.push_back((calc_member){2,turn_to_value(L)&gt;turn_to_value(v[i])});
+                                break;
+                            }
+                            default:m.push_back(v[i]);
+                        }
+                    }else m.push_back(v[i]);
+                }
+                v=m,m.clear();
+            }
+            case 6:{
+                for(int i=0;i&lt;(int)v.size();++i){
+                    if(v[i].type==3){
+                        switch(v[i].id_val){
+                            case 17:{
+                                calc_member L=m.back();
+                                m.pop_back();
+                                ++i;
+                                m.push_back((calc_member){2,turn_to_value(L)==turn_to_value(v[i])});
+                                break;
+                            }
+                            case 18:{
+                                calc_member L=m.back();
+                                m.pop_back();
+                                ++i;
+                                m.push_back((calc_member){2,turn_to_value(L)!=turn_to_value(v[i])});
+                                break;
+                            }
+                            default:m.push_back(v[i]);
+                        }
+                    }else m.push_back(v[i]);
+                }
+                v=m,m.clear();
+            }
+            case 7:{
+                for(int i=0;i&lt;(int)v.size();++i)
+                    if(v[i].type==3&amp;&amp;v[i].id_val==19){
+                        calc_member L=m.back();
+                        m.pop_back();
+                        ++i;
+                        int result=(turn_to_value(L)==0)+(turn_to_value(v[i])==0);
+                        if(result==2)result=0;
+                        m.push_back((calc_member){2,result});
+                    }else m.push_back(v[i]);
+                v=m,m.clear();
+            }
+            case 8:{
+                for(int i=0;i&lt;(int)v.size();++i)
+                    if(v[i].type==3&amp;&amp;v[i].id_val==20){
+                        calc_member L=m.back();
+                        m.pop_back();
+                        ++i;
+                        m.push_back((calc_member){2,turn_to_value(L)&amp;&amp;turn_to_value(v[i])});
+                    }else m.push_back(v[i]);
+                v=m,m.clear();
+            }
+            case 9:{
+                for(int i=0;i&lt;(int)v.size();++i)
+                    if(v[i].type==3&amp;&amp;v[i].id_val==21){
+                        calc_member L=m.back();
+                        m.pop_back();
+                        ++i;
+                        m.push_back((calc_member){2,turn_to_value(L)||turn_to_value(v[i])});
+                    }else m.push_back(v[i]);
+                v=m,m.clear();
+            }
+            case 10:{
+                for(int i=(int)v.size()-1;~i;--i)
+                    if(v[i].type==3&amp;&amp;v[i].id_val==22){
+                        --i;
+                        calc_member R=m.back();
+                        m.pop_back();
+                        if(v[i].type!=1)ErrorThrow(&quot;Expression Error!&quot;);
+                        __v[v[i].id_val].get(v[i].address)=turn_to_value(R);
+                        m.push_back(v[i]);
+                    }else m.push_back(v[i]);
+                v=m,m.clear();
+                reverse(v.begin(),v.end());
+            }
+            case 11:{
+                if(v.size()&amp;&amp;v[0].type==5){
+                    if(v[0].id_val==0){
+                        // cin
+                        for(int i=1;i&lt;(int)v.size();++i)
+                            if(v[i].type==1)
+                                __v[v[i].id_val].get(v[i].address)=InputBuffer.nextInt();
+                    }else if(v[0].id_val==1){
+                        // cout
+                        for(int i=1;i&lt;(int)v.size();++i)
+                            if(v[i].type==5){
+                                // endl
+                                cout&lt;&lt;&#39;\n&#39;;
+                            }else if(v[i].type!=3)cout&lt;&lt;turn_to_value(v[i]);
+                    }else ErrorThrow(&quot;Expression Error!&quot;);
+                    v.resize(1);
+                }
+            }
+            case 12:return v[0];
+        }
+        ErrorThrow(&quot;Unknown Error!&quot;);
+        return(calc_member){0};
+    }
+    calc_member calc(){
+        if(L&gt;R)return(calc_member){2,1};
+        vector&lt;calc_member&gt;vc;
+        for(int pos=L;pos&lt;=R;++pos){
+            if(words.s[pos]==&quot;cin&quot;){
+                vc.push_back((calc_member){5,0});
+            }else if(words.s[pos]==&quot;cout&quot;){
+                vc.push_back((calc_member){5,1});
+            }else if(words.s[pos]==&quot;endl&quot;){
+                vc.push_back((calc_member){5,2});
+            }else if(words.type[pos]==4||words.type[pos]==5){
+                if(words.s[pos]==&quot;,&quot;){
+                    vc.push_back((calc_member){3,IndexOperator[&quot;)&quot;]});
+                    vc.push_back((calc_member){3,IndexOperator[&quot;(&quot;]});
+                }else
+                    vc.push_back((calc_member){3,IndexOperator[words.s[pos]]});
+            }else if(words.type[pos]==3){
+                vc.push_back((calc_member){2,atoi(words.s[pos].c_str())});
+            }else{
+                if(IndexFunc.count(words.s[pos])){
+                    // function
+                    vc.push_back((calc_member){4,IndexFunc[words.s[pos]]});
+                }else{
+                    // variable
+                    vc.push_back((calc_member){1,IndexVar[words.s[pos]].back(),-1});
+                }
+            }
+        }
+        return _CALC_(vc);
+    }
+}EXPRESSION[50005];
+
+struct VarDefine{
+    vector&lt;string&gt;name;
+    vector&lt;vector&lt;int&gt; &gt;W;
+}_define[5005];
+
+struct For{
+    int tp0,id0; // first statement
+    int _; // second statement
+    int id1; // third statement
+    int _block_id;
+}_for[5005];
+
+struct While{
+    int _;
+    int _block_id;
+}_while[5005];
+
+struct If{
+    int _;
+    int _then_id,_else_id;
+}_if[5005];
+
+struct Return{
+    int _;
+}_return[5005];
+
+// -----------------------------------------------------------------------------------------------
+
+int FindNextsentense(int pos){
+    if(words.s[pos]==&quot;{&quot;){
+        int _=0;
+        for(int it=pos;it&lt;=words.n;++it)
+            if(words.s[it]==&quot;{&quot;)++_;
+        else if(words.s[it]==&quot;}&quot;){
+            if(!--_)return it;
+        }
+        ErrorThrow(&quot;Compile Error!&quot;);
+    }
+    if(words.s[pos]==&quot;while&quot;||words.s[pos]==&quot;for&quot;){
+        int _=0,it=pos;
+        for(;it&lt;=words.n;++it){
+            if(words.s[it]==&quot;(&quot;)++_;else
+            if(words.s[it]==&quot;)&quot;){if(!--_)break;}
+        }
+        if(it&gt;words.n)ErrorThrow(&quot;Compile Error!&quot;);
+        return FindNextsentense(it+1);
+    }
+    if(words.s[pos]==&quot;if&quot;){
+        int _=0,it=pos;
+        for(;it&lt;=words.n;++it){
+            if(words.s[it]==&quot;(&quot;)++_;else
+            if(words.s[it]==&quot;)&quot;){if(!--_)break;}
+        }
+        if(it&gt;words.n)ErrorThrow(&quot;Compile Error!&quot;);
+        int npos=FindNextsentense(it+1);
+        if(npos&lt;words.n&amp;&amp;words.s[npos+1]==&quot;else&quot;)
+            return FindNextsentense(npos+2);
+        return npos;
+    }
+    for(int it=pos;it&lt;=words.n;++it)
+        if(words.s[it]==&quot;;&quot;)return it;
+    ErrorThrow(&quot;Compile Error!&quot;);
+    return 0;
+}
+
+void Block::set(int l,int r){
+    if(words.s[l]==&quot;{&quot;&amp;&amp;words.s[r]==&quot;}&quot;)++l,--r;
+    for(int pos=l;pos&lt;=r;){
+        if(words.s[pos]==&quot;;&quot;){++pos;continue;}
+        else if(words.s[pos]==&quot;{&quot;){
+            int it=pos,_=0;
+            while(1){
+                if(words.s[it]==&quot;{&quot;)++_;else
+                if(words.s[it]==&quot;}&quot;){if(!--_)break;}
+                ++it;
+            }
+            cmd.push_back((__commands){7,++Blocktot});
+            B[Blocktot].set(pos,it);
+            pos=it+1;
+        }else if(words.type[pos]!=1){
+            // expression
+            cmd.push_back((__commands){2,++EXPtot});
+            int it=pos;
+            while(words.s[it]!=&quot;;&quot;)++it;
+            EXPRESSION[EXPtot].set(pos,it-1);
+            pos=it+1;
+        }else if(words.s[pos]==&quot;int&quot;){
+            // new variable define
+            cmd.push_back((__commands){1,++_definetot});
+            string name=&quot;&quot;;
+            vector&lt;int&gt;W;
+            ++pos;
+            while(1){
+                if(words.type[pos]==2)name=words.s[pos];
+                else if(words.type[pos]==3)W.push_back(atoi(words.s[pos].c_str()));
+                else if(words.s[pos]==&quot;,&quot;||words.s[pos]==&quot;;&quot;){
+                    _define[_definetot].name.push_back(name);
+                    _define[_definetot].W.push_back(W);
+                    name=&quot;&quot;,W.clear();
+                }
+                if(words.s[pos]==&quot;;&quot;)break;
+                ++pos;
+            }
+        }else if(words.s[pos]==&quot;for&quot;){
+            // for
+            cmd.push_back((__commands){3,++_fortot});
+            int _f=_fortot;
+            pos+=2;int it=pos;
+            while(words.s[it]!=&quot;;&quot;)++it;
+            if(words.s[pos]==&quot;int&quot;){
+                _for[_f].tp0=2;
+                _for[_f].id0=++_definetot;
+                string name=&quot;&quot;;
+                vector&lt;int&gt;W;
+                ++pos;
+                while(1){
+                    if(words.type[pos]==2)name=words.type[pos];
+                    else if(words.type[pos]==3)W.push_back(atoi(words.s[pos].c_str()));
+                    else if(words.s[pos]==&quot;,&quot;||words.s[pos]==&quot;;&quot;){
+                        _define[_definetot].name.push_back(name);
+                        _define[_definetot].W.push_back(W);
+                        name=&quot;&quot;,W.clear();
+                    }
+                    if(words.s[pos]==&quot;;&quot;)break;
+                }
+            }else{
+                _for[_f].tp0=1;
+                _for[_f].id0=++EXPtot;
+                EXPRESSION[EXPtot].set(pos,it-1);
+            }
+            pos=it+1;
+            for(it=pos;words.s[it]!=&quot;;&quot;;++it);
+            _for[_f]._=++EXPtot;
+            EXPRESSION[EXPtot].set(pos,it-1);
+            pos=it+1;
+            int _=1;
+            while(1){
+                if(words.s[it]==&quot;(&quot;)++_;else
+                if(words.s[it]==&quot;)&quot;){if(!--_)break;}
+                ++it;
+            }
+            _for[_f].id1=++EXPtot;
+            EXPRESSION[EXPtot].set(pos,it-1);
+            pos=it+1;
+            _for[_f]._block_id=++Blocktot;
+            int endpos=FindNextsentense(pos);
+            B[_for[_f]._block_id].set(pos,endpos);
+            pos=endpos+1;
+        }else if(words.s[pos]==&quot;while&quot;){
+            // while
+            cmd.push_back((__commands){4,++_whiletot});
+            int _w=_whiletot;
+            while(words.s[pos]!=&quot;(&quot;)++pos;
+            int it=pos,_=0;
+            while(1){
+                if(words.s[it]==&quot;(&quot;)++_;else
+                if(words.s[it]==&quot;)&quot;){if(!--_)break;}
+                ++it;
+            }
+            _while[_w]._=++EXPtot;
+            EXPRESSION[EXPtot].set(pos+1,it-1);
+            pos=it+1;
+            _while[_w]._block_id=++Blocktot;
+            int endpos=FindNextsentense(pos);
+            B[_while[_w]._block_id].set(pos,endpos);
+            pos=endpos+1;
+        }else if(words.s[pos]==&quot;if&quot;){
+            // if
+            cmd.push_back((__commands){5,++_iftot});
+            int _i=_iftot;
+            while(words.s[pos]!=&quot;(&quot;)++pos;
+            int it=pos,_=0;
+            while(1){
+                if(words.s[it]==&quot;(&quot;)++_;else
+                if(words.s[it]==&quot;)&quot;){if(!--_)break;}
+                ++it;
+            }
+            _if[_i]._=++EXPtot;
+            EXPRESSION[EXPtot].set(pos+1,it-1);
+            pos=it+1;
+            _if[_i]._then_id=++Blocktot;
+            int endpos=FindNextsentense(pos);
+            B[_if[_i]._then_id].set(pos,endpos);
+            pos=endpos+1;
+            if(words.s[pos]==&quot;else&quot;){
+                _if[_i]._else_id=++Blocktot;
+                endpos=FindNextsentense(++pos);
+                B[_if[_i]._else_id].set(pos,endpos);
+                pos=endpos+1;
+            }else _if[_i]._else_id=0;
+        }else if(words.s[pos]==&quot;return&quot;){
+            // return
+            cmd.push_back((__commands){6,++_returntot});
+            int it=pos;
+            while(words.s[it]!=&quot;;&quot;&amp;&amp;it&lt;=r)++it;
+            _return[_returntot]._=++EXPtot;
+            EXPRESSION[EXPtot].set(pos+1,it-1);
+            pos=it+1;
+        }else ErrorThrow(&quot;Compile Error! Exit code=2&quot;);
+    }
+}
+int Block::run(bool&amp;isreturn){
+    int res=0;
+    vector&lt;int&gt;var_id;
+    for(int i=0;i&lt;(int)cmd.size();++i){
+        if(isreturn)break;
+        switch(cmd[i].tp){
+            case 1:{
+                // define
+                VarDefine&amp;d=_define[cmd[i].id];
+                for(int j=0;j&lt;(int)d.name.size();++j)
+                    var_id.push_back(new_var(d.W[j],d.name[j]));
+                break;
+            }
+            case 2:{
+                // expression
+                EXPRESSION[cmd[i].id].calc();
+                break;
+            }
+            case 3:{
+                // for
+                For&amp;F=_for[cmd[i].id];
+                vector&lt;int&gt;for_var_id;
+                if(F.tp0==1)EXPRESSION[F.id0].calc();
+                else{
+                    VarDefine&amp;d=_define[F.id0];
+                    for(int j=0;j&lt;(int)d.name.size();++j)
+                        for_var_id.push_back(new_var(d.W[j],d.name[j]));
+                }
+                while(turn_to_value(EXPRESSION[F._].calc())){
+                    res=B[F._block_id].run(isreturn);
+                    if(isreturn)break;
+                    EXPRESSION[F.id1].calc();
+                }
+                if(F.tp0==2){
+                    for(int j=(int)for_var_id.size()-1;~j;--j)
+                        dispose_id(for_var_id[j]);
+                }
+                break;
+            }
+            case 4:{
+                // while
+                While&amp;w=_while[cmd[i].id];
+                while(turn_to_value(EXPRESSION[w._].calc())){
+                    res=B[w._block_id].run(isreturn);
+                    if(isreturn)break;
+                }
+                break;
+            }
+            case 5:{
+                // if
+                If&amp;f=_if[cmd[i].id];
+                if(turn_to_value(EXPRESSION[f._].calc()))
+                    res=B[f._then_id].run(isreturn);
+                else if(f._else_id!=0)
+                    res=B[f._else_id].run(isreturn);
+                break;
+            }
+            case 6:{
+                // return
+                isreturn=1;
+                res=turn_to_value(EXPRESSION[_return[cmd[i].id]._].calc());
+                break;
+            }
+            case 7:{
+                Block&amp;_B=B[cmd[i].id];
+                res=_B.run(isreturn);
+                break;
+            }
+        }
+    }
+    for(int i=(int)var_id.size()-1;~i;--i)
+        dispose_id(var_id[i]);
+    return res;
+}
+
+// -----------------------------------------------------------------------------------------------
+
+inline bool isword(char ch){
+    return(ch&gt;=&#39;a&#39;&amp;&amp;ch&lt;=&#39;z&#39;)||(ch&gt;=&#39;A&#39;&amp;&amp;ch&lt;=&#39;Z&#39;)||ch==&#39;_&#39;;
+}
+
+inline int GetOperatorPriority(string s){
+    //if(s==&quot;[&quot;||s==&quot;]&quot;||s==&quot;(&quot;||s==&quot;)&quot;)return 1;
+    if(s==&quot;!&quot;||s==&quot;$+&quot;||s==&quot;$-&quot;)return 2;
+    if(s==&quot;*&quot;||s==&quot;/&quot;||s==&quot;%&quot;)return 3;
+    if(s==&quot;+&quot;||s==&quot;-&quot;)return 4;
+    if(s==&quot;&lt;=&quot;||s==&quot;&gt;=&quot;||s==&quot;&lt;&quot;||s==&quot;&gt;&quot;)return 5;
+    if(s==&quot;==&quot;||s==&quot;!=&quot;)return 6;
+    if(s==&quot;^&quot;)return 7;
+    if(s==&quot;&amp;&amp;&quot;)return 8;
+    if(s==&quot;||&quot;)return 9;
+    if(s==&quot;=&quot;)return 10;
+    if(s==&quot;&lt;&lt;&quot;||s==&quot;&gt;&gt;&quot;)return 11;
+    return 0;
+}
+
+inline int matchKeyword(string s){
+    if(s==&quot;int&quot;)return 1;
+    if(s==&quot;for&quot;)return 2;
+    if(s==&quot;while&quot;)return 3;
+    if(s==&quot;if&quot;)return 4;
+    if(s==&quot;else&quot;)return 5;
+    if(s==&quot;return&quot;)return 6;
+    return 0;
+}
+
+void readCode(){
+    string tmp;
+    getline(cin,tmp),getline(cin,tmp),getline(cin,tmp),getline(cin,tmp);
+    while(getline(cin,tmp))code+=&#39; &#39;+tmp;
+}
+
+void CodeDivide(string code){
+    string wd=&quot;&quot;;
+    for(int pos=0;pos&lt;(int)code.length();){
+        if(code[pos]==&#39; &#39;||code[pos]==&#39;\n&#39;){++pos;continue;}
+        wd+=code[pos++];
+        if((wd==&quot;&lt;&quot;||wd==&quot;&gt;&quot;)&amp;&amp;(code[pos]==&#39;=&#39;||wd[0]==code[pos])){
+            // match &quot;&lt;=&quot;, &quot;&gt;=&quot;, &quot;&lt;&lt;&quot;, &quot;&gt;&gt;&quot;
+            wd+=code[pos++];
+        }else if((wd==&quot;+&quot;||wd==&quot;-&quot;)&amp;&amp;(words.type[words.n]!=2&amp;&amp;words.type[words.n]!=3&amp;&amp;words.s[words.n]!=&quot;)&quot;&amp;&amp;words.s[words.n]!=&quot;]&quot;)){
+            wd=&quot;$&quot;+wd;
+        }else if((wd==&quot;=&quot;||wd==&quot;!&quot;)&amp;&amp;code[pos]==&#39;=&#39;){
+            // match &quot;==&quot;, &quot;!=&quot;
+            wd+=code[pos++];
+        }else if((wd==&quot;&amp;&quot;||wd==&quot;|&quot;)&amp;&amp;code[pos]==wd[0]){
+            // match &quot;&amp;&amp;&quot;, &quot;||&quot;
+            wd+=code[pos++];
+        }
+        if(!isword(wd[0])&amp;&amp;!isdigit(wd[0])){
+            // not constant or variable
+            if(GetOperatorPriority(wd))
+                words.push(wd,4);
+            else
+                words.push(wd,5);
+            wd=&quot;&quot;;
+        }
+        else if(isword(wd[0])&amp;&amp;!isword(code[pos])&amp;&amp;!isdigit(code[pos])){
+            // variable, function or keyword
+            if(matchKeyword(wd))
+                words.push(wd,1);
+            else
+                words.push(wd,2);
+            wd=&quot;&quot;;
+        }else if(isdigit(wd[0])&amp;&amp;!isdigit(code[pos])){
+            words.push(wd,3);
+            wd=&quot;&quot;;
+        }
+    }
+}
+
+void splitFunction(int l,int r){
+    ++__func_tot;
+    Func&amp;F=__func[__func_tot];
+    F.name=words.s[l];
+    IndexFunc[words.s[l]]=__func_tot;
+    int pos=l+1;
+    for(;words.s[pos]!=&quot;)&quot;;++pos)if(words.type[pos]==2)
+        F.para_name.push_back(words.s[pos]);
+    F._main_id=++Blocktot;
+    B[Blocktot].set(pos+1,r);
+}
+
+void splitVar(int l,int r){
+    string name;
+    vector&lt;int&gt;WD;
+    for(int i=l;i&lt;=r;++i)
+        if(words.type[i]==2)name=words.s[i];
+    else if(words.type[i]==3)WD.push_back(atoi(words.s[i].c_str()));
+    else if(words.s[i]==&quot;,&quot;||words.s[i]==&quot;;&quot;){
+        new_var(WD,name);
+        WD.clear(),name=&quot;&quot;;
+    }
+}
+
+void CodeBlock(){
+    for(int pos=1;pos&lt;=words.n;){
+        if(words.s[pos]==&quot;int&quot;){
+            bool flag=0;
+            int _=0,i=pos+1;
+            while(1){
+                if(words.s[i]==&quot;;&quot;&amp;&amp;!flag)break;
+                else if(words.s[i]==&quot;{&quot;)flag=1,++_;
+                else if(words.s[i]==&quot;}&quot;){
+                    if(!--_)break;
+                }
+                ++i;
+                if(i&gt;words.n)ErrorThrow(&quot;CodeBlock Error1&quot;);
+            }
+            if(flag){
+                // Function
+                splitFunction(pos+1,i);
+            }else{
+                // Variable
+                splitVar(pos+1,i);
+            }
+            pos=i+1;
+        }else ErrorThrow(&quot;CodeBlock Error2&quot;);
+    }
+}
+
+void CodeAnalysis(){
+    CodeDivide(code);
+//    for(int i=1;i&lt;=words.n;++i)
+//        cerr&lt;&lt;i&lt;&lt;&quot; : &quot;&lt;&lt;words.s[i]&lt;&lt;&quot;  &quot;&lt;&lt;words.type[i]&lt;&lt;endl;
+    CodeBlock();
+}
+
+void programInit(){
+    ios::sync_with_stdio(0),cin.tie(0),cout.tie(0);
+    for(int i=0;i&lt;20000;++i)memory_id.push_back(i);
+    _set(&quot;[&quot;,1),_set(&quot;]&quot;,2),_set(&quot;(&quot;,3),_set(&quot;)&quot;,4);
+    _set(&quot;!&quot;,5),_set(&quot;$+&quot;,6),_set(&quot;$-&quot;,7);
+    _set(&quot;*&quot;,8),_set(&quot;/&quot;,9),_set(&quot;%&quot;,10);
+    _set(&quot;+&quot;,11),_set(&quot;-&quot;,12);
+    _set(&quot;&lt;=&quot;,13),_set(&quot;&gt;=&quot;,14),_set(&quot;&lt;&quot;,15),_set(&quot;&gt;&quot;,16);
+    _set(&quot;==&quot;,17),_set(&quot;!=&quot;,18);
+    _set(&quot;^&quot;,19);
+    _set(&quot;&amp;&amp;&quot;,20);
+    _set(&quot;||&quot;,21);
+    _set(&quot;=&quot;,22);
+    _set(&quot;&gt;&gt;&quot;,23);
+    _set(&quot;&lt;&lt;&quot;,24);
+    __func[++__func_tot].name=&quot;putchar&quot;;
+    IndexFunc[&quot;putchar&quot;]=__func_tot;
+    __func[__func_tot].para_name.push_back(&quot;c&quot;);
+    IndexVar[&quot;cin&quot;]=IndexVar[&quot;cout&quot;]=IndexVar[&quot;endl&quot;]=vector&lt;int&gt;();
+}
+
+int main(){
+    programInit();
+    InputBuffer.Init();
+    readCode();
+    CodeAnalysis();
+    __func[IndexFunc[&quot;main&quot;]].run(vector&lt;int&gt;());
+    return 0;
+}
+</code></pre>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 Gitalk -->
+<div id="gitalk-comment">
+    <!-- Gitalk 评论框 -->
+<div id="gitalk-container"></div>
+
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<script>
+    var gitalk = new Gitalk({
+            clientID: '3b1c25bc36babcc685f2',
+            clientSecret: '2ab0b0464d9a1f774a6dd652da7b34de0ad6d6f5',
+            repo: 'talking',
+            owner: 'mrsrz',
+            admin: ['mrsrz'],
+            // facebook-like distraction free mode
+            distractionFreeMode: false
+        })
+   gitalk.render('gitalk-container')
+</script>
+</div>
+<style>
+    #gitalk-comment {
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/Ynoi2009-rpdq/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/UOJ96/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/side.jpg);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/head.png" alt="mrsrz's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        1473200830@qq.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2020/10/">十月 2020<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/09/">九月 2020<span class="sidebar_archives-count">24</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/07/">七月 2020<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/06/">六月 2020<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/04/">四月 2020<span class="sidebar_archives-count">22</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/03/">三月 2020<span class="sidebar_archives-count">47</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/02/">二月 2020<span class="sidebar_archives-count">42</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/01/">一月 2020<span class="sidebar_archives-count">52</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/12/">十二月 2019<span class="sidebar_archives-count">31</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/11/">十一月 2019<span class="sidebar_archives-count">54</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">33</span></a>
+            </ul>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/tags" title="标签">
+                
+                    <i class="material-icons sidebar-material-icons">tab</i>
+                
+                标签
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/about" title="关于">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                关于
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/links" title="友链">
+                
+                    <i class="material-icons sidebar-material-icons">face</i>
+                
+                友链
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/mrsrz" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+        <a href="https://www.zhihu.com/people/mrsrz" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-zhihu">
+                <span class="visuallyhidden">Zhihu</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;2019&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>Mrsrz's blog
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+   <!-- GitTalk -->
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+    
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+    <script src="true?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</body>
+    
+</html>
