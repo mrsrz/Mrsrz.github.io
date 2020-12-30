@@ -239,7 +239,7 @@
 
     
         <meta property="article:published_time" content="Mon Oct 12 2020 18:35:14 GMT+0800">
-        <meta property="article:modified_time" content="Mon Dec 28 2020 16:05:18 GMT+0800">
+        <meta property="article:modified_time" content="Wed Dec 30 2020 08:47:05 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -262,7 +262,7 @@
     "mainEntityOfPage": "http://yoursite.com/IOI2021hw/index.html",
     "headline": "IOI2021集训队作业",
     "datePublished": "Mon Oct 12 2020 18:35:14 GMT+0800",
-    "dateModified": "Mon Dec 28 2020 16:05:18 GMT+0800",
+    "dateModified": "Wed Dec 30 2020 08:47:05 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "mrsrz",
@@ -2304,7 +2304,7 @@ int main(){
 <p>对于 $a\leq b$ 的条件，我们由 $a$ 向 $b$ 连出有向边。如果图上有强连通分量，则这个强连通分量中的点的取值必须相同。</p>
 <p>我们将图进行缩点，得到一张 DAG。这张 DAG 中的每个点都是可以在限制范围内任意取值的。因此题目中的 $k$ 就是 DAG 的点数。</p>
 <p>对于常数项 $C$，我们只需要知道 DAG 上的 $m$ 个点有多少种不同的大小关系（即图的拓扑序个数），然后除以 $m!$ 即可。</p>
-<p>求拓扑序可以使用状压 DP。</p>
+<p>求拓扑序个数可以使用状压 DP。</p>
 <h2 id="Code：-17"><a href="#Code：-17" class="headerlink" title="Code："></a>Code：</h2><pre><code class="lang-c++">#include&lt;bits/stdc++.h&gt;
 using namespace std;
 const int N=21;
@@ -2647,7 +2647,7 @@ int main(){
 <p>因此复杂度为 $O(2^{64-n}\cdot n)$。</p>
 <p>不过这里我们要考虑一些细节。</p>
 <p>我们在求解 $r$ 的时候，是根据 $a_1\cdot r\equiv b_1\pmod{2^{64}}$。</p>
-<p>令 $k=\texttt{<strong>builtin_ctz}(b_1)$（即 $b_1$ 二进制末尾 $0$ 的个数）。由于 $r$ 是奇数，故 $\texttt{</strong>builtin_ctz(a_1)}=k$ 成立。</p>
+<p>令 $k=\texttt{__builtin_ctz}(b_1)$（即 $b_1$ 二进制末尾 $0$ 的个数）。由于 $r$ 是奇数，故 $\texttt{__builtin_ctz(a_1)}=k$ 成立。</p>
 <p>将等式两边同时除以 $2^k$ 后得 $a_1\cdot r\cdot 2^{-k}=b_1\cdot 2^{-k}\pmod{2^{64-k}}$。</p>
 <p>因此我们得到的 $r$ 只能保证前 $64-k$ 位是正确的。</p>
 <p>那么我们还需要枚举后面的 $k$ 位。</p>
