@@ -239,7 +239,7 @@
 
     
         <meta property="article:published_time" content="Mon Dec 21 2020 10:14:30 GMT+0800">
-        <meta property="article:modified_time" content="Mon Jan 04 2021 17:09:25 GMT+0800">
+        <meta property="article:modified_time" content="Thu Jan 14 2021 07:02:22 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -262,7 +262,7 @@
     "mainEntityOfPage": "http://yoursite.com/Ynoi2008-rsmemq/index.html",
     "headline": "【Ynoi2008】rsmemq",
     "datePublished": "Mon Dec 21 2020 10:14:30 GMT+0800",
-    "dateModified": "Mon Jan 04 2021 17:09:25 GMT+0800",
+    "dateModified": "Thu Jan 14 2021 07:02:22 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "mrsrz",
@@ -530,7 +530,7 @@
 </blockquote>
 <p>这个问题有多种做法，这里介绍一种较方便且容易理解的做法（感谢 memset0 提供了该做法的思路）。</p>
 <p>上面这个二维的问题是比较容易想到的转化后的题意，不过我们还是直接讨论一个三元组 $(v,x,y)$ 对 $l,r$ 的贡献。</p>
-<p>令 $a$ 为 $[v-y,v-x]\cap[l,r]$ 的长度，$b$ 为 $[v+x,v+y]\cap[l,r]$ 的长度，则贡献为 $\max(a,b)$。</p>
+<p>令 $a$ 为 $[v-y,v-x]\cap[l,r]$ 的长度，$b$ 为 $[v+x,v+y]\cap[l,r]$ 的长度，则贡献为 $\min(a,b)$。</p>
 <p>令 $mid=\lfloor\frac{l+r}2\rfloor$，可以发现，当 $mid\leq v$ 时，总有 $a\geq b$，当 $mid\gt v$ 时，总有 $a\lt b$。</p>
 <p>那么我们对 $mid\leq v$ 和 $mid\gt v$ 两种情况分开统计贡献即可。每种情况都是一个简单的<strong>二维数点</strong>问题，使用离线树状数组解决即可，时间复杂度 $O((n+m)\log n)$，空间复杂度 $O(n+m)$。</p>
 </li>
