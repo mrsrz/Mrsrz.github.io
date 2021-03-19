@@ -239,7 +239,7 @@
 
     
         <meta property="article:published_time" content="Fri Jan 31 2020 21:56:43 GMT+0800">
-        <meta property="article:modified_time" content="Thu Oct 15 2020 11:16:46 GMT+0800">
+        <meta property="article:modified_time" content="Fri Mar 19 2021 16:44:42 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -262,7 +262,7 @@
     "mainEntityOfPage": "http://yoursite.com/Ynoi2010-D1T2/index.html",
     "headline": "【Ynoi2010】Brodal queue",
     "datePublished": "Fri Jan 31 2020 21:56:43 GMT+0800",
-    "dateModified": "Thu Oct 15 2020 11:16:46 GMT+0800",
+    "dateModified": "Fri Mar 19 2021 16:44:42 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "mrsrz",
@@ -513,20 +513,23 @@
 <h2 id="Code："><a href="#Code：" class="headerlink" title="Code："></a>Code：</h2><pre><code class="lang-c++">#include&lt;cstdio&gt;
 #include&lt;cstring&gt;
 #include&lt;cctype&gt;
-#include&lt;unistd.h&gt;
-#include&lt;sys/mman.h&gt;
-#define bel(x)(((x-1)&gt;&gt;10)+1)
+#define bel(x)(((x-1)/B)+1)
 typedef unsigned long long LL;
-const int B=1024,N=2e5+5,K=N/B+2,BK=B+2,__=B*(B-1)/2;
+const int B=1200,N=2e5+5,K=N/B+2,BK=B+2,__=B*(B-1)/2;
 char*ss;
-inline int Init(){ss=static_cast&lt;char*&gt;(mmap(0,1&lt;&lt;25,PROT_READ,MAP_PRIVATE,STDIN_FILENO,0));return 0;}
-const int __START__=Init();
-inline unsigned readint(){
-    unsigned d=0;
-    while(!isdigit(*ss))++ss;
-    while(isdigit(*ss))d=d*10+(*ss++^&#39;0&#39;);
-    return d;
-}
+struct istream {
+    static const int size = 1 &lt;&lt; 25;
+    char buf[size], *vin;
+    inline istream() {
+        fread(buf,1,size,stdin);
+        vin = buf - 1;
+    }
+    inline istream&amp; operator &gt;&gt; (int &amp; x) {
+        for(;isspace(*++vin););
+        for(x = *vin &amp; 15;isdigit(*++vin);) x = x * 10 + (*vin &amp; 15);
+        return * this;
+    }
+} cin;
 struct ostream {
     static const int size = 1 &lt;&lt; 22;
     char buf[size], *vout;
@@ -558,7 +561,7 @@ inline LL sqr(int x){return(LL)x*x;}
 void init(){
     static bool vis[N];
     blocks=bel(n);
-    for(int i=1;i&lt;=blocks;++i)L[i]=R[i-1]+1,R[i]=i&lt;&lt;10;R[blocks]=n;
+    for(int i=1;i&lt;=blocks;++i)L[i]=R[i-1]+1,R[i]=i*B;R[blocks]=n;
     for(int i=1;i&lt;=blocks;++i){
         for(int j=1;j&lt;=n;++j)pre[j][i]=pre[j][i-1];
         top=0;
@@ -628,15 +631,19 @@ LL F(int l,int r){
     return ret;
 }
 int main(){
-    n=readint(),m=readint();
-    for(int i=1;i&lt;=n;++i)a[i]=readint();
+    cin&gt;&gt;n&gt;&gt;m;
+    for(int i=1;i&lt;=n;++i)cin&gt;&gt;a[i];
     init();
     unsigned lst=0;
     for(int T=1;T&lt;=m;++T){
-        int op=readint(),l=readint()^lst,r=readint()^lst;
+        int op,l,r;
+        cin&gt;&gt;op&gt;&gt;l&gt;&gt;r;
+        l^=lst,r^=lst;
         if(op==1){
             _s[T]=~0;
-            int x=readint()^lst;
+            int x;
+            cin&gt;&gt;x;
+            x^=lst;
             const int bL=bel(l),bR=bel(r);
             if(bL==bR)modify(l,r,x);else{
                 modify(l,R[bL],x),modify(L[bR],r,x);
@@ -648,7 +655,7 @@ int main(){
             if(r-l+1&lt;=3*B)ans=solve(l,r);else{
                 const int bL=bel(l),bR=bel(r);
                 ans=sum[bR-1]+sum[bL]-2*F(bL+1,bR-1);
-                for(int i=bL+1;i&lt;bR;++i)ans-=!tag[i]&lt;&lt;10;
+                for(int i=bL+1;i&lt;bR;++i)ans-=!tag[i]*B;
                 ans&gt;&gt;=1,top=0;
                 for(int i=R[bL];i&gt;=l;--i){
                     const int x=get(i);
@@ -663,7 +670,7 @@ int main(){
                 for(int i=1;i&lt;=top;++i)
                 ans+=(LL)dt[sta[i]]*(pre[sta[i]][bR-1]-pre[sta[i]][bL])+(LL)dt[sta[i]]*(dt[sta[i]]-1)/2;
                 for(int i=bL+1;i&lt;bR;++i)
-                if(tag[i])ans+=((LL)(dt[tag[i]]+pre[tag[i]][bR-1]-pre[tag[i]][bL])&lt;&lt;10)+__,dt[tag[i]]+=B;
+                if(tag[i])ans+=((LL)(dt[tag[i]]+pre[tag[i]][bR-1]-pre[tag[i]][bL])*B)+__,dt[tag[i]]+=B;
                 for(int i=1;i&lt;=top;++i)dt[sta[i]]=0;
                 for(int i=bL+1;i&lt;bR;++i)dt[tag[i]]=0;
             }
@@ -1168,24 +1175,6 @@ console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viose
 
                 </main>
             </div>
-        <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
--->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-</body>
+        </body>
     
 </html>
